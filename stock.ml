@@ -16,6 +16,8 @@ let yahoo_finance_url symbol =
 
 let get_quote symbol =
   let url = yahoo_finance_url symbol in
-  let r = http_get (string_of_url url) in
-  let rs = Util.split r in
-  float_of_string (List.nth rs 1)
+  let resp = try http_get (string_of_url url) with 
+    Http_client.Http_error (_,msg) -> failwith msg
+  in
+  let quote = List.nth (Util.split resp) 1 in
+  float_of_string quote
