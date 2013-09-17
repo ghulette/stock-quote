@@ -1,0 +1,5 @@
+quote
+*.cmi
+*.cmx
+*.o
+._d
