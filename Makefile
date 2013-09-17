@@ -1,4 +1,6 @@
-SOURCES = quote.ml
+SOURCES = util.mli util.ml \
+          stock.mli stock.ml \
+          main.ml
 PACKS = netclient
 RESULT = quote
 

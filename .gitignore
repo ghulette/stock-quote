@@ -2,4 +2,5 @@ quote
 *.cmi
 *.cmx
 *.o
-._d
+._d/
+._ncdi/
